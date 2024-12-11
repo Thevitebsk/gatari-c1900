@@ -1,7 +1,7 @@
 inp="";instruct=[];reg={}
 def itergal(code:str):
  code=code.split();print(code)
- if code[0]=="REG":reg[code[1]]=code[2]
+ if code[0]=="REG":reg[code[1]]=int(code[2])
 def GAL():
  while True:
   inp=input("C/GAL:")
