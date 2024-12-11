@@ -4,4 +4,8 @@ print(
 * GATARI C1900 *
 ****************
 """
-);input("C:")
+)
+def main():
+ while True:
+  inp=input("C:")
+  if inp=="ASM":break
