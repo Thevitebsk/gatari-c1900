@@ -6,7 +6,7 @@ def GAL():
  while True:
   inp=input("C/GAL:")
   instruct.append(inp)
-  if inp=="END":instruct.clear();break
+  if inp=="END":instruct.clear();reg.clear();break
   if inp=="RUN":
    instruct.pop()
    while len(instruct)>0:itergal(instruct[0]);instruct.pop(0)
