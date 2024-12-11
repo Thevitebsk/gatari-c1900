@@ -1,8 +1,7 @@
-inp=""
+inp="";instruct=[]
 def itergal(code:str):
  code=code.split();print(code)
 def GAL():
- instruct=[]
  while True:
   inp=input("C/GAL:")
   instruct.append(inp)
@@ -16,7 +15,7 @@ def main():
   inpl=inp.split()
   if inpl[0]=="NEW":
    if len(inpl)>2:
-    with open(f'{" ".join(inpl[2:])}.{inpl[1]}', 'w') as f:...
+    with open(f'{" ".join(inpl[2:]).upper()}.{inpl[1].lower()}', 'w') as f:...
    else:print("NOT ENOUGH DATA")
   elif inp=="END":break
   elif inp=="ASM":GAL()
