@@ -1,9 +1,15 @@
+inp=""
+def itergal(code:str):
+ code=code.split();print(code)
 def GAL():
+ instruct=[]
  while True:
-  instruct=[]
   inp=input("C/GAL:")
   instruct.append(inp)
-  if inp=="EXIT":instruct.clear();break
+  if inp=="END":instruct.clear();break
+  if inp=="RUN":
+   instruct.pop()
+   while len(instruct)>0:itergal(instruct[0]);instruct.pop(0)
 def main():
  while True:
   inp=input("C:")
