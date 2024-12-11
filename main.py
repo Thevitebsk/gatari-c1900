@@ -2,6 +2,7 @@ inp="";instruct=[];reg={}
 def itergal(code:str):
  code=code.split();print(code)
  if code[0]=="REG":reg[code[1]]=code[2]
+ else:print(f"\"{code[0]}\" IS NOT VALID GAL OPERATOR")
 def GAL():
  while True:
   inp=input("C/GAL:").upper()
