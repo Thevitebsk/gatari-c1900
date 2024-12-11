@@ -1,6 +1,7 @@
-inp="";instruct=[]
+inp="";instruct=[];reg={}
 def itergal(code:str):
  code=code.split();print(code)
+ if code[0]=="REG":reg[code[1]]=code[2]
 def GAL():
  while True:
   inp=input("C/GAL:")
@@ -19,6 +20,7 @@ def main():
    else:print("NOT ENOUGH DATA")
   elif inp=="END":break
   elif inp=="ASM":GAL()
+  else:print("NOT FOUND")
 print(
 """
 ****************
