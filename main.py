@@ -15,7 +15,9 @@ def main():
   inp=input("C:")
   inpl=inp.split()
   if inpl[0]=="NEW":
-   with open(f'{" ".join(inpl[2:])}.{inpl[1]}', 'w') as f:...
+   if len(inpl)>2:
+    with open(f'{" ".join(inpl[2:])}.{inpl[1]}', 'w') as f:...
+   else:print("NOT ENOUGH DATA")
   elif inp=="END":break
   elif inp=="ASM":GAL()
 print(
