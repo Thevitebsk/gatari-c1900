@@ -1,6 +1,6 @@
 inp="";instruct=[];reg={}
 
-def itergal(code:str)->bool:
+def INTERGAL(code:str)->bool:
  "Interpreter for Gatari ASM Language"
  code=code.split()
  if code[0]=="REG":reg[code[1]]=code[2]
@@ -17,7 +17,7 @@ def GAL():
   if inp=="RUN":
    instruct.pop()
    while instruct:
-    if itergal(instruct[0]):break
+    if INTERGAL(instruct[0]):break
     instruct.pop(0)
 
 def MAIN():
