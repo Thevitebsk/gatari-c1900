@@ -19,7 +19,6 @@ def GAL():
    while instruct:
     if itergal(instruct[0]):break
     instruct.pop(0)
-   print(len(instruct),"bytes")
 
 def MAIN():
  "Main interface"
