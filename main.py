@@ -25,14 +25,8 @@ def MAIN():
  "Main interface"
  while True:
   inp=input("C:").upper()
-  inpl=inp.split()
-  if inpl[0]=="NEW":
-   if len(inpl)>2:
-    with open(f'{" ".join(inpl[2:]).upper()}.{inpl[1].lower()}', 'a') as f:f.write(l)
-   else:print("NOT ENOUGH DATA")
-  elif inp=="END":break
+  if inp=="END":break
   elif inp=="ASM":GAL()
   else:print("NOT FOUND")
 
-print("****************\n* GATARI C1900 *\n****************")
-MAIN()
+print("****************\n* GATARI C1900 *\n****************");MAIN()
