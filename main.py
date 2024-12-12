@@ -1,9 +1,11 @@
 inp="";instruct=[];reg={};rc=0;l=[]
 def itergal(code:str):
+ "Interpreter for Gatari ASM Language"
  code=code.split()
  if code[0]=="REG":reg[code[1]]=code[2]
  else:print(f"\"{code[0]}\" IS NOT VALID GAL OPERATOR");rc=1;pass
 def GAL():
+ "Gtari ASM Language Interface"
  while True:
   inp=input("C/GAL:").upper()
   instruct.append(inp)
@@ -11,7 +13,8 @@ def GAL():
   if inp=="RUN":
    instruct.pop()
    while len(instruct)>0:itergal(instruct[0]);instruct.pop(0)
-def main():
+def MAIN():
+ "Main interface"
  while True:
   inp=input("C:").upper()
   inpl=inp.split()
@@ -29,4 +32,4 @@ print(
 ****************
 """
 )
-main()
+MAIN()
