@@ -1,9 +1,10 @@
 inp="";instruct=[];reg={}
 
-def INTERGAL(code:str)->bool:
+def itergal(code:str)->bool:
  "Interpreter for Gatari ASM Language"
  code=code.split()
- if code[0]=="REG":reg[code[1]]=code[2]
+ if code[0]=="REG":reg[code[1]]=int(code[2])
+ elif code[0]=="INC":reg[code[1]]=reg[code[1]]+1
  else:print(f"\"{code[0]}\" IS NOT VALID GAL OPERATOR");return 1
 
 def GAL():
@@ -16,8 +17,9 @@ def GAL():
   if inp=="LIST":instruct.pop();print("\n".join(instruct))
   if inp=="RUN":
    instruct.pop()
+   print(len(instruct),"bytes")
    while instruct:
-    if INTERGAL(instruct[0]):break
+    if itergal(instruct[0]):break
     instruct.pop(0)
 
 def MAIN():
