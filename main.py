@@ -4,7 +4,7 @@ def itergal(code:str)->bool:
  "Interpreter for Gatari ASM Language"
  code=code.split()
  if code[0]=="REG":reg[code[1]]=int(code[2])
- elif code[0]=="INC":reg[code[1]]=reg[code[1]]+1
+ elif code[0]=="ADD":reg[code[1]]=reg[code[1]]+int(code[2])
  else:print(f"\"{code[0]}\" IS NOT VALID GAL OPERATOR");return 1
 
 def GAL():
